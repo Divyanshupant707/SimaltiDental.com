@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simalti Dental Clinic | Premium Dental Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#0ea5e9', // Sky Blue
+                            600: '#0284c7', // Darker Blue
+                            900: '#0c4a6e', // Deep Navy
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#128C7E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="bg-brand-50 p-2 rounded-xl">
+                        <svg class="w-8 h-8 text-brand-600" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M388.388 32.093c-32.458 0-60.517 20.396-78.594 47.413-2.226 3.327-12.244 17.968-17.025 24.925-3.316 4.827-6.208 8.998-8.525 12.29-7.977 11.336-11.543 16.213-15.79 20.585-3.904 4.019-7.973 6.959-12.454 6.959s-8.55-2.94-12.454-6.959c-4.247-4.372-7.813-9.249-15.79-20.585-2.317-3.292-5.209-7.463-8.525-12.29-4.781-6.957-14.799-21.598-17.025-24.925C164.128 52.489 136.069 32.093 103.611 32.093 63.095 32.093 32 67.642 32 115.477c0 72.304 44.461 144.844 125.568 237.156 17.924 20.401 35.504 39.98 52.22 58.404 24.129 26.606 55.848 68.87 69.562 68.87 5.991 0 11.111-8.019 15.542-16.396 4.819-9.111 8.984-19.272 12.876-29.044 8.561-21.491 15.795-40.456 20.191-49.918 40.055-86.137 69.644-153.567 78.991-189.177l20.58-78.42c7.927-30.198 11.47-59.176 11.47-88.35 0-52.611-33.446-96.509-80.612-96.509zM236.549 155.368c8.942-9.204 15.866-18.287 21.169-26.842 10.567-17.043 17.657-30.918 17.657-41.976 0-29.853 21.301-51.154 47.394-51.154 16.089 0 29.877 7.886 38.52 17.796l-20.58 78.42c-7.747 29.515-30.874 82.673-63.525 152.889-3.633 7.814-9.465 22.867-16.641 40.878-16.402-18.151-33.688-37.537-51.312-57.599-68.479-77.946-107.232-141.052-107.232-202.697 0-29.853 21.301-51.154 47.394-51.154 10.529 0 19.922 4.326 26.865 9.939 10.562 8.542 14.992 18.919 25.837 34.694 2.317 3.292 5.209 7.463 8.525 12.29 5.02 7.305 11.986 19.399 16.458 26.897 4.387 7.356 7.414 10.635 9.471 12.751zm0 0"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-slate-800 tracking-tight">Simalti<span class="text-brand-600">Dental</span></span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-sm font-medium hover:text-brand-600 transition">Services</a>
+                    <a href="#locations" class="text-sm font-medium hover:text-brand-600 transition">Locations</a>
+                    <a href="#testimonials" class="text-sm font-medium hover:text-brand-600 transition">Testimonials</a>
+                    <a href="#appointment" class="bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-900 transition shadow-lg shadow-brand-500/30">Book Now</a>
+                </div>
+
+                <button class="md:hidden text-slate-600" onclick="toggleMenu()">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+                <a href="#services" class="block py-2 text-slate-600">Services</a>
+                <a href="#locations" class="block py-2 text-slate-600">Locations</a>
+                <a href="#testimonials" class="block py-2 text-slate-600">Testimonials</a>
+                <a href="#appointment" class="block mt-4 text-center bg-brand-600 text-white py-3 rounded-lg">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2068" alt="Dental Clinic" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/70"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 text-white text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">World-Class Dental Care for Your Family</h1>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">Experience painless dentistry with state-of-the-art technology. From routine checkups to cosmetic makeovers, Simalti Dental Clinic ensures your smile shines brightest.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#appointment" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center justify-center gap-2">
+                            Book Visit <i data-feather="calendar" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold transition">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full max-w-md" id="appointment">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">How Would You Like to Book?</h3>
+                        <p class="text-gray-500 text-sm mb-6">Choose your preferred method to schedule your appointment.</p>
+                        
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <a href="tel:+919557080133" class="text-center p-3 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition shadow-sm group border border-red-100">
+                                <i data-feather="phone" class="w-5 h-5 mx-auto mb-1 group-hover:scale-110 transition"></i>
+                                <span class="text-xs font-semibold">Call Now</span>
+                            </a>
+                            <a href="mailto:info@simaltidental.com" class="text-center p-3 rounded-lg bg-brand-50 text-brand-600 hover:bg-brand-100 transition shadow-sm group border border-brand-100">
+                                <i data-feather="mail" class="w-5 h-5 mx-auto mb-1 group-hover:scale-110 transition"></i>
+                                <span class="text-xs font-semibold">Send Email</span>
+                            </a>
+                            <button onclick="document.getElementById('bookingForm').scrollIntoView({ behavior: 'smooth' });" class="text-center p-3 rounded-lg bg-whatsapp-50 text-whatsapp-600 hover:bg-green-100 transition shadow-sm group border border-green-100">
+                                <svg class="w-5 h-5 mx-auto mb-1 group-hover:scale-110 transition fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span class="text-xs font-semibold">WhatsApp</span>
+                            </button>
+                        </div>
+                        
+                        <div class="relative flex items-center mb-6">
+                            <div class="flex-grow border-t border-gray-300"></div>
+                            <span class="flex-shrink mx-4 text-gray-400 text-xs tracking-widest uppercase">Quick Request</span>
+                            <div class="flex-grow border-t border-gray-300"></div>
+                        </div>
+
+                        <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="pName" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-whatsapp-500 focus:ring-2 focus:ring-whatsapp-600/20 outline-none transition" placeholder="John Doe">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                        <input type="tel" id="pPhone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-whatsapp-500 focus:ring-2 focus:ring-whatsapp-600/20 outline-none transition" placeholder="Phone No.">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                        <input type="date" id="pDate" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-whatsapp-500 focus:ring-2 focus:ring-whatsapp-600/20 outline-none transition">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+                                    <select id="pService" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-whatsapp-500 focus:ring-2 focus:ring-whatsapp-600/20 outline-none transition">
+                                        <option>General Checkup</option>
+                                        <option>Teeth Whitening</option>
+                                        <option>Root Canal</option>
+                                        <option>Braces/Orthodontics</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold py-4 rounded-lg transition transform active:scale-95 shadow-lg flex items-center justify-center gap-2">
+                                    <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                    Send Request via WhatsApp
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">What we do</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Comprehensive Dental Services</h2>
+                <div class="w-20 h-1 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-xl border border-gray-100 p-2 hover:shadow-xl transition-all duration-300">
+                    <div class="overflow-hidden rounded-lg h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" alt="General Dentistry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-brand-600 mb-4">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">General Dentistry</h3>
+                        <p class="text-slate-500 leading-relaxed mb-4">Comprehensive oral exams, ultrasonic cleanings, and preventive care to keep your foundation strong.</p>
+                        <a href="#" class="text-brand-600 font-semibold text-sm hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-xl border border-gray-100 p-2 hover:shadow-xl transition-all duration-300">
+                    <div class="overflow-hidden rounded-lg h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Cosmetic Dentistry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 mb-4">
+                            <i data-feather="sun"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Cosmetic Dentistry</h3>
+                        <p class="text-slate-500 leading-relaxed mb-4">Laser teeth whitening, porcelain veneers, and complete smile makeovers for a confident look.</p>
+                        <a href="#" class="text-brand-600 font-semibold text-sm hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-xl border border-gray-100 p-2 hover:shadow-xl transition-all duration-300">
+                    <div class="overflow-hidden rounded-lg h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" alt="Orthodontics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center text-teal-600 mb-4">
+                            <i data-feather="smile"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Orthodontics</h3>
+                        <p class="text-slate-500 leading-relaxed mb-4">Invisalign clear aligners and modern braces to straighten teeth and correct bite issues for all ages.</p>
+                        <a href="#" class="text-brand-600 font-semibold text-sm hover:underline">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Visit Our Locations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="md:w-2/5 h-48 md:h-auto relative">
+                             <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="Downtown Branch">
+                        </div>
+                        <div class="p-8 md:w-3/5">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Downtown Branch</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p class="flex items-start gap-3"><i data-feather="map-pin" class="text-brand-600 w-5 h-5 shrink-0"></i> 123 Dental Avenue, Downtown</p>
+                                <p class="flex items-start gap-3"><i data-feather="clock" class="text-brand-600 w-5 h-5 shrink-0"></i> Mon-Fri: 8am-7pm</p>
+                                <p class="flex items-start gap-3"><i data-feather="phone" class="text-brand-600 w-5 h-5 shrink-0"></i> (555) 123-4567</p>
+                            </div>
+                            <button class="mt-6 w-full py-2 border border-brand-600 text-brand-600 font-semibold rounded hover:bg-brand-50 transition">Get Directions</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="md:w-2/5 h-48 md:h-auto relative">
+                             <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="Suburb Branch">
+                        </div>
+                        <div class="p-8 md:w-3/5">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Suburb Branch</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p class="flex items-start gap-3"><i data-feather="map-pin" class="text-brand-600 w-5 h-5 shrink-0"></i> 456 Smile Street, Suburb</p>
+                                <p class="flex items-start gap-3"><i data-feather="clock" class="text-brand-600 w-5 h-5 shrink-0"></i> Mon-Fri: 9am-6pm</p>
+                                <p class="flex items-start gap-3"><i data-feather="phone" class="text-brand-600 w-5 h-5 shrink-0"></i> (555) 987-6543</p>
+                            </div>
+                            <button class="mt-6 w-full py-2 border border-brand-600 text-brand-600 font-semibold rounded hover:bg-brand-50 transition">Get Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Patient Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl relative">
+                    <div class="absolute -top-6 left-8 bg-brand-600 text-white p-3 rounded-full">
+                        <i data-feather="message-circle"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"The team at Simalti Dental made my root canal completely painless. I was nervous but they put me at ease immediately."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" class="w-10 h-10 rounded-full object-cover mr-3">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Sarah Johnson</h4>
+                            <p class="text-xs text-slate-500">Regular Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl relative">
+                    <div class="absolute -top-6 left-8 bg-brand-600 text-white p-3 rounded-full">
+                        <i data-feather="message-circle"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"I've been coming here for years. The staff remembers me and my dental history, which makes me feel valued."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" class="w-10 h-10 rounded-full object-cover mr-3">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Michael Chen</h4>
+                            <p class="text-xs text-slate-500">Implant Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl relative">
+                    <div class="absolute -top-6 left-8 bg-brand-600 text-white p-3 rounded-full">
+                        <i data-feather="message-circle"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"My kids actually look forward to their dental visits! The pediatric dentists here are amazing with children."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150" class="w-10 h-10 rounded-full object-cover mr-3">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Emma Rodriguez</h4>
+                            <p class="text-xs text-slate-500">Mother of two</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-2xl font-bold tracking-tight mb-4 block">Simalti<span class="text-brand-500">Dental</span></span>
+                    <p class="text-gray-400 max-w-sm">Dedicated to providing the highest quality dental care in a comfortable and relaxed atmosphere.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-brand-500 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Services</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Insurance</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-brand-600 transition"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-brand-600 transition"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-brand-600 transition"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                © 2023 Simalti Dental Clinic. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // WhatsApp Logic
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            
+            // 1. Get Values
+            const name = document.getElementById('pName').value;
+            const phone = document.getElementById('pPhone').value;
+            const date = document.getElementById('pDate').value;
+            const service = document.getElementById('pService').value;
+
+            // 2. YOUR WHATSAPP NUMBER
+            const whatsappNumber = "919557080133"; 
+
+            // 3. Create the message
+            const message = `*New Appointment Request* \n\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nService: ${service}`;
+
+            // 4. Create the URL
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            // 5. Open WhatsApp
+            window.open(url, '_blank');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.add('bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
